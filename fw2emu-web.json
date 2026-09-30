@@ -1,0 +1,21 @@
+{
+  "source": "https://github.com/dfdarty/orca9",
+  "license": "MIT",
+  "guide": {
+    "what": "Orca-9: Pod Commander, a 3D space shooter built on WiliBSP. Pick one of four orca-shaped hulls, each with its own weapon, special, weakness and barrel roll, then survive waves of asteroids and alien Stingers with a manta-ray drone guarding you. Everything is drawn by a small software renderer on the DISPLAY CPU.",
+    "see": "The title screen: ORCA-9 with the APEX hull turning and its Guardian Angel manta circling it.",
+    "tryit": [
+      { "label": "Open the hangar", "send": ["press OK"], "text": "- the ship-select screen, with stats, special, weakness and roll for each hull" },
+      { "label": "Next hull", "send": ["press RIGHT"], "text": "- or tap NEXT on the blue key label" },
+      { "label": "Launch", "send": ["press GREEN"], "text": "- hold steady while it centres the tilt controls" },
+      { "label": "Fire for 3 s", "send": ["hold OK", "release OK"], "gap_ms": 3000, "text": "- hold O on your keyboard to fire" },
+      { "label": "Tilt right", "send": ["set tilt 0 15"], "text": "- the ship banks and slides right; the Sensors panel's roll slider steers too" },
+      { "label": "Level out", "send": ["set tilt 0 0"] },
+      { "label": "Barrel roll", "send": ["press LEFT"], "text": "- a full roll sideways; it can't be hit in the middle of it" },
+      { "label": "Special", "send": ["press CANCEL"], "text": "- the hull's special: Overdrive, Ghost Burn, Pod Call or Breach" },
+      { "text": "Easiest way to play: drag on the screen to steer, hold O to fire, arrow keys roll (left/right) and boost or brake (up/down), C for the special, 4 (blue key) for the FTL jump when its bar is full." }
+    ],
+    "check": "The log shows orca9: launch hull=..., roll, special and wave lines, and an fps line every 2 seconds.",
+    "panels": ["controls", "sensors", "log"]
+  }
+}
