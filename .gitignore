@@ -2,3 +2,5 @@ out/
 build*/
 sdcard/
 check.png
+*.uf2
+*.gif
