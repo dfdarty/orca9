@@ -1,0 +1,17 @@
+# Look at the enemies without firing, then Pod Call on the Matriarch.
+wait 2500
+expect "orca9: ready" 3000
+press OK
+expect "orca9: hangar"
+press GREEN
+expect "orca9: play" 3000
+wait 5200
+screenshot out/look1.png lcd
+wait 1800
+screenshot out/look2.png lcd
+wait 2500
+screenshot out/look3.png lcd
+press CANCEL
+wait 900
+screenshot out/look_od.png lcd
+quit

@@ -1,0 +1,32 @@
+# Orca-9 smoke test (fw2emu test / the GitHub Action):
+# title -> hangar (buttons and touch) -> launch -> steer, fire, roll, special.
+wait 2500
+expect "orca9: ready imu=1 touch=1" 3000
+screenshot out/title.png lcd
+press OK
+expect "orca9: hangar"
+press RIGHT
+expect "orca9: select BLACKFISH"
+touch 144 309
+expect "orca9: select APEX"
+screenshot out/hangar.png lcd
+press GREEN
+expect "orca9: launch hull=APEX"
+expect "orca9: play" 3000
+set tilt 0 12
+hold OK
+wait 1500
+press LEFT
+expect "orca9: roll left"
+set tilt 8 -10
+wait 2000
+set tilt 0 0
+drag 240 200 320 170 1500
+screenshot out/play.png lcd
+press CANCEL
+expect "orca9: special OVERDRIVE"
+wait 1200
+screenshot out/overdrive.png lcd
+release OK
+expect "orca9: fps=" 4000
+quit
